@@ -1,3 +1,60 @@
 # angular-long-press
 Long press support for both desktop and mobile when used in AngularJS framework
+
+### Dependencies
+
+This repository contains **native AngularJS directives** . The **only required dependencies** are: 
+
+*   [AngularJS](http://angularjs.org) (tested with 1.4.9 although it probably works with older versions)
+
+### Installation
+
+bower install angular-ui-clock --save
+
+Alternatively files can be downloaded [downloaded from Github](https://github.com/puneethrai/angular-long-press).
+and copy the files from `dist/`. Then add the sources to your code (adjust paths as needed) after 
+adding the dependencies for Angular first:
+
+```html
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-long-press/dist/angular-long-press.js"></script>
+```
+
+Whichever method you choose the good news is that the overall size is very small: &lt; 2.5kb for all directives (~0.5kb with gzip compression!)
+
+
+As soon as you've got all the files downloaded and included in your page you just need to declare a dependency on the `pr.longpress` [module](http://docs.angularjs.org/guide/module):   
+
+```javascript
+angular.module('myModule', ['pr.longpress']);
+```
+
+# Example
+
+## Markup
+
+```html
+<button on-long-press="onLongPress()" on-touch-end="onTouchEnd()" prevent-click="'true'"></button>
+```
+
+### Options
+
+There are several options that you can set as attributes on the directive element
+
+1.  `on-long-press` : method to be called when long press event is triggerred
+2.  `on-touch-end` : method to be called when touch end or mouse up event is triggered
+3.  `prevent-click` : default true, to prevent click event getting triigered after long press is triggerred
+
+
+# Issues
+ 
+Please check if issue exists and otherwise open issue in [github](https://github.com/deepu105/angular-clock/issues?state=open)
+
+**Please add a link to a plunker, jsbin, or equivalent.**
+
 Thank you [GitHub Gist] https://gist.github.com/BobNisco/9885852
+
+
+# License
+
+angular-long-press.js is available under the [MIT license](http://opensource.org/licenses/MIT).
