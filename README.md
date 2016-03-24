@@ -52,7 +52,7 @@ Please check if issue exists and otherwise open issue in [github](https://github
 
 **Please add a link to a plunker, jsbin, or equivalent.**
 
-Thank you [GitHub Gist] https://gist.github.com/BobNisco/9885852
+Thank you [GitHub Gist](https://gist.github.com/BobNisco/9885852)
 
 
 # License
