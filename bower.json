@@ -1,6 +1,6 @@
 {
   "name": "angular-long-press",
-  "version": "0.5.0",
+  "version": "0.2.0",
   "main": [
     "./dist/angular-long-press.js"
   ],
@@ -42,13 +42,13 @@
     "angular": "1.x"
   },
   "homepage": "https://github.com/puneethrai/angular-long-press",
-  "_release": "0.1.0",
+  "_release": "0.2.0",
   "_resolution": {
     "type": "version",
-    "tag": "0.1.0",
+    "tag": "0.2.0",
     "commit": "4a482b69f26a189f4a60dc3ae6d989ee41296969"
   },
   "_source": "git://github.com/puneethrai/angular-long-press.git",
-  "_target": "0.1.0",
+  "_target": "0.2.0",
   "_originalSource": "angular-long-press"
 }
