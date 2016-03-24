@@ -9,7 +9,7 @@ This repository contains **native AngularJS directives** . The **only required d
 
 ### Installation
 
-bower install angular-ui-clock --save
+bower install angular-long-press--save
 
 Alternatively files can be downloaded [downloaded from Github](https://github.com/puneethrai/angular-long-press).
 and copy the files from `dist/`. Then add the sources to your code (adjust paths as needed) after 
