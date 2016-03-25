@@ -1,0 +1,53 @@
+{
+  "name": "angular-long-press",
+  "main": [
+    "./dist/angular-long-press.js"
+  ],
+  "authors": [
+    "Puneeth Rai <npuneethrai@yahoo.co.in>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/puneethrai/angular-long-press.git"
+  },
+  "description": "An angular.js long press directive for both desktop and mobile",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular",
+    "angular.js",
+    "long",
+    "press",
+    "touch",
+    "touchend",
+    "desktop",
+    "mobile"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.x"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "angular": "1.x"
+  },
+  "homepage": "https://github.com/puneethrai/angular-long-press",
+  "_release": "462c53aaad",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "462c53aaad4d00d03703bf6eda9a822541f46f5d"
+  },
+  "_source": "git://github.com/puneethrai/angular-long-press.git",
+  "_target": "*",
+  "_originalSource": "angular-long-press",
+  "_direct": true
+}

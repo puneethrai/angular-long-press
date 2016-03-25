@@ -8,14 +8,22 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/angular-long-press/dist/angular-long-press.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </head>
-  <body>
+  <body  ng-app="LongPress">
     <section class="page-header">
       <h1 class="project-name">Angular-long-press</h1>
       <h2 class="project-tagline">Long press support for both desktop and mobile when used in AngularJS framework</h2>
       <a href="https://github.com/puneethrai/angular-long-press" class="btn">View on GitHub</a>
       <a href="https://github.com/puneethrai/angular-long-press/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/puneethrai/angular-long-press/tarball/master" class="btn">Download .tar.gz</a>
+      <div ng-controller="MainController">
+        <a href="#" class="btn btn-block" ng-click="onClick()" on-long-press="onLongPress()" on-touch-end="onTouchEnd()" prevent-click="'true'">Long Press with click prevented</a>
+        <a href="#" class="btn btn-block" ng-click="onClick()" on-long-press="onLongPress()" on-touch-end="onTouchEnd()" prevent-click="'false'">Long Press with click not prevented</a>
+        <p class="page-header">{{eventDisplay}}</p>
+      </div>
     </section>
 
     <section class="main-content">

@@ -1,0 +1,21 @@
+{
+  "name": "Angular Long Press",
+  "version": "0.2.0",
+  "homepage": "https://github.com/puneethrai/angular-long-press",
+  "authors": [
+    "Puneeth Rai <npuneethrai@yahoo.co.in>"
+  ],
+  "description": "Angular Long press demo and instruction page",
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "Angular"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.5.2",
+    "angular-long-press": "*"
+  }
+}
