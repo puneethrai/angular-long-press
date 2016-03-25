@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular-long-press by puneethrai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Angular-long-press</h1>
+      <h2 class="project-tagline">Long press support for both desktop and mobile when used in AngularJS framework</h2>
+      <a href="https://github.com/puneethrai/angular-long-press" class="btn">View on GitHub</a>
+      <a href="https://github.com/puneethrai/angular-long-press/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/puneethrai/angular-long-press/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="angular-long-press" class="anchor" href="#angular-long-press" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>angular-long-press</h1>
+
+<p>Long press support for both desktop and mobile when used in AngularJS framework</p>
+
+<h3>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies</h3>
+
+<p>This repository contains <strong>native AngularJS directives</strong> . The <strong>only required dependencies</strong> are: </p>
+
+<ul>
+<li>  <a href="http://angularjs.org">AngularJS</a> (tested with 1.4.9 although it probably works with older versions)</li>
+</ul>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>bower install angular-long-press--save</p>
+
+<p>Alternatively files can be downloaded <a href="https://github.com/puneethrai/angular-long-press">downloaded from Github</a>.
+and copy the files from <code>dist/</code>. Then add the sources to your code (adjust paths as needed) after 
+adding the dependencies for Angular first:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>../bower_components/angular/angular.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/bower_components/angular-long-press/dist/angular-long-press.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>Whichever method you choose the good news is that the overall size is very small: &lt; 2.5kb for all directives (~0.5kb with gzip compression!)</p>
+
+<p>As soon as you've got all the files downloaded and included in your page you just need to declare a dependency on the <code>pr.longpress</code> <a href="http://docs.angularjs.org/guide/module">module</a>:   </p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">angular</span>.<span class="pl-en">module</span>(<span class="pl-s"><span class="pl-pds">'</span>myModule<span class="pl-pds">'</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>pr.longpress<span class="pl-pds">'</span></span>]);</pre></div>
+
+<h1>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h1>
+
+<h2>
+<a id="markup" class="anchor" href="#markup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Markup</h2>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">on-long-press</span>=<span class="pl-s"><span class="pl-pds">"</span>onLongPress()<span class="pl-pds">"</span></span> <span class="pl-e">on-touch-end</span>=<span class="pl-s"><span class="pl-pds">"</span>onTouchEnd()<span class="pl-pds">"</span></span> <span class="pl-e">prevent-click</span>=<span class="pl-s"><span class="pl-pds">"</span>'true'<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">button</span>&gt;</pre></div>
+
+<h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h3>
+
+<p>There are several options that you can set as attributes on the directive element</p>
+
+<ol>
+<li> <code>on-long-press</code> : method to be called when long press event is triggerred</li>
+<li> <code>on-touch-end</code> : method to be called when touch end or mouse up event is triggered</li>
+<li> <code>prevent-click</code> : default true, to prevent click event getting triigered after long press is triggerred</li>
+</ol>
+
+<h1>
+<a id="issues" class="anchor" href="#issues" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Issues</h1>
+
+<p>Please check if issue exists and otherwise open issue in <a href="https://github.com/deepu105/angular-clock/issues?state=open">github</a></p>
+
+<p><strong>Please add a link to a plunker, jsbin, or equivalent.</strong></p>
+
+<p>Thank you <a href="https://gist.github.com/BobNisco/9885852">GitHub Gist</a></p>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h1>
+
+<p>angular-long-press.js is available under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/puneethrai/angular-long-press">Angular-long-press</a> is maintained by <a href="https://github.com/puneethrai">puneethrai</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
