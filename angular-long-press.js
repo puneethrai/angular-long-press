@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular
-        .module('pr.longpress')
+        .module('pr.longpress', [])
         .directive('onLongPress', function ($timeout) {
             return {
                 restrict: 'A',
