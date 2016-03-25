@@ -52,7 +52,7 @@ There are several options that you can set as attributes on the directive elemen
 
 # Issues
  
-Please check if issue exists and otherwise open issue in [github](https://github.com/deepu105/angular-clock/issues?state=open)
+Please check if issue exists and otherwise open issue in [github](https://github.com/puneethrai/angular-long-press/issues?state=open)
 
 **Please add a link to a plunker, jsbin, or equivalent.**
 
