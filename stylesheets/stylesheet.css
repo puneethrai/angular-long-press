@@ -45,6 +45,7 @@ a:hover {
 
 .btn-block {
     display: block;
+    margin: 0 auto 1rem !important;
 }
 
 @media screen and (min-width: 64em) {

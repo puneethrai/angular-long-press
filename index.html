@@ -8,20 +8,20 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <script src="./bower_components/angular/angular.min.js"></script>
-    <script src="./bower_components/angular-long-press/dist/angular-long-press.min.js"></script>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-long-press/dist/angular-long-press.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </head>
   <body  ng-app="LongPress">
     <section class="page-header">
-      <h1 class="project-name">Angular-long-press</h1>
+      <h1 class="project-name">Angular long press</h1>
       <h2 class="project-tagline">Long press support for both desktop and mobile when used in AngularJS framework</h2>
       <a href="https://github.com/puneethrai/angular-long-press" class="btn">View on GitHub</a>
       <a href="https://github.com/puneethrai/angular-long-press/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/puneethrai/angular-long-press/tarball/master" class="btn">Download .tar.gz</a>
       <div ng-controller="MainController">
-        <a href="#" class="btn btn-block" ng-click="onClick()" on-long-press="onLongPress()" on-touch-end="onTouchEnd()" prevent-click="'true'">Long Press with click prevented</a>
-        <a href="#" class="btn btn-block" ng-click="onClick()" on-long-press="onLongPress()" on-touch-end="onTouchEnd()" prevent-click="'false'">Long Press with click not prevented</a>
+        <a href="#" class="btn btn-block" ng-click="onClick()" on-long-press="onLongPress()" on-touch-end="onTouchEnd()" prevent-click="true">Long Press with click prevented</a>
+        <a href="#" class="btn btn-block" ng-click="onClick()" on-long-press="onLongPress()" on-touch-end="onTouchEnd()" prevent-click="false">Long Press with click not prevented</a>
         <p class="page-header">{{eventDisplay}}</p>
       </div>
     </section>
@@ -50,8 +50,8 @@
 and copy the files from <code>dist/</code>. Then add the sources to your code (adjust paths as needed) after 
 adding the dependencies for Angular first:</p>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>../bower_components/angular/angular.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/bower_components/angular-long-press/dist/angular-long-press.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>./bower_components/angular/angular.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>./bower_components/angular-long-press/dist/angular-long-press.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
 
 <p>Whichever method you choose the good news is that the overall size is very small: &lt; 2.5kb for all directives (~0.5kb with gzip compression!)</p>
 
@@ -65,7 +65,7 @@ adding the dependencies for Angular first:</p>
 <h2>
 <a id="markup" class="anchor" href="#markup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Markup</h2>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">on-long-press</span>=<span class="pl-s"><span class="pl-pds">"</span>onLongPress()<span class="pl-pds">"</span></span> <span class="pl-e">on-touch-end</span>=<span class="pl-s"><span class="pl-pds">"</span>onTouchEnd()<span class="pl-pds">"</span></span> <span class="pl-e">prevent-click</span>=<span class="pl-s"><span class="pl-pds">"</span>'true'<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">button</span>&gt;</pre></div>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">on-long-press</span>=<span class="pl-s"><span class="pl-pds">"</span>onLongPress()<span class="pl-pds">"</span></span> <span class="pl-e">on-touch-end</span>=<span class="pl-s"><span class="pl-pds">"</span>onTouchEnd()<span class="pl-pds">"</span></span> <span class="pl-e">prevent-click</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">button</span>&gt;</pre></div>
 
 <h3>
 <a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h3>
@@ -73,9 +73,9 @@ adding the dependencies for Angular first:</p>
 <p>There are several options that you can set as attributes on the directive element</p>
 
 <ol>
-<li> <code>on-long-press</code> : method to be called when long press event is triggerred</li>
+<li> <code>on-long-press</code> : method to be called when long press event is triggered</li>
 <li> <code>on-touch-end</code> : method to be called when touch end or mouse up event is triggered</li>
-<li> <code>prevent-click</code> : default true, to prevent click event getting triigered after long press is triggerred</li>
+<li> <code>prevent-click</code> : default true, to prevent click event getting triggered after long press is triggered</li>
 </ol>
 
 <h1>

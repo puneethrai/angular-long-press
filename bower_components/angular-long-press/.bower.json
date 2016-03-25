@@ -40,14 +40,13 @@
     "angular": "1.x"
   },
   "homepage": "https://github.com/puneethrai/angular-long-press",
-  "_release": "462c53aaad",
+  "_release": "330339dea3",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "462c53aaad4d00d03703bf6eda9a822541f46f5d"
+    "commit": "330339dea337a389d2004d5bc7a7acbca47f5b7a"
   },
   "_source": "git://github.com/puneethrai/angular-long-press.git",
   "_target": "*",
-  "_originalSource": "angular-long-press",
-  "_direct": true
+  "_originalSource": "angular-long-press"
 }

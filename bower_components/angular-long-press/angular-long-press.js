@@ -1,8 +1,8 @@
 (function () {
     'use strict';
     angular
-        .module('pr.longpress')
-        .directive('onLongPress', function ($timeout) {
+        .module('pr.longpress', [])
+        .directive('onLongPress', function ($parse, $timeout) {
             return {
                 restrict: 'A',
                 link: function ($scope, $elm, $attrs) {
