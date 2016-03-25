@@ -3,6 +3,8 @@ Long press support for both desktop and mobile when used in AngularJS framework
 
 Thank you [GitHub Gist](https://gist.github.com/BobNisco/9885852)
 
+[Demo and Project page](http://puneethrai.github.io/angular-long-press/)
+
 ### Dependencies
 
 This repository contains **native AngularJS directives** . The **only required dependencies** are: 
