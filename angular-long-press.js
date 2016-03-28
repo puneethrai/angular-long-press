@@ -7,9 +7,12 @@
                 restrict: 'A',
                 link: function ($scope, $elm, $attrs) {
                     var timer;
-                    $elm.bind('touchstart, mousedown', onEnter);
+                    $elm.bind('touchstart', onEnter);
+                    $elm.bind('touchend', onExit);
 
-                    $elm.bind('touchend, mouseup', onExit);
+                    $elm.bind('mousedown', onEnter);
+                    $elm.bind('mouseup', onExit);
+                   
                     $elm.bind('click', onClick);
 
                     function onEnter(evt) {
