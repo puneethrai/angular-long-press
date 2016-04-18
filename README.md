@@ -61,3 +61,7 @@ Please check if issue exists and otherwise open issue in [github](https://github
 # License
 
 angular-long-press.js is available under the [MIT license](http://opensource.org/licenses/MIT).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/puneethrai/angular-long-press/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
