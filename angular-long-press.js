@@ -2,7 +2,7 @@
     'use strict';
     angular
         .module('pr.longpress', [])
-        .directive('onLongPress', function ($parse, $timeout) {
+        .directive('onLongPress', ['$parse', '$timeout', function ($parse, $timeout) {
             return {
                 restrict: 'A',
                 link: function ($scope, $elm, $attrs) {
@@ -93,5 +93,5 @@
                     }
                 }
             };
-        });
+        }]);
 })();
