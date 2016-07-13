@@ -7,16 +7,37 @@
                 restrict: 'A',
                 link: function ($scope, $elm, $attrs) {
                     var timer;
+                    var timerDuration = (!isNaN($attrs.longPressDuration) && parseInt($attrs.longPressDuration)) || 600;
+                    // By default we prevent long press when user scrolls
+                    var preventLongPressOnScroll = ($attrs.preventOnscrolling ? $attrs.preventOnscrolling === 'true' : true)
+                    // Variable used to prevent long press while scrolling
+                    var touchStartY;
+                    var touchStartX;
+                    var MAX_DELTA = 15;
+                    // Bind touch, mouse and click event
                     $elm.bind('touchstart', onEnter);
                     $elm.bind('touchend', onExit);
 
                     $elm.bind('mousedown', onEnter);
                     $elm.bind('mouseup', onExit);
-                   
+
                     $elm.bind('click', onClick);
+                    // For windows mobile browser
+                    $elm.bind('pointerdown', onEnter);
+                    $elm.bind('pointerup', onExit);
+                    if (preventLongPressOnScroll) {
+                        // Bind touchmove so that we prevent long press when user is scrolling
+                        $elm.bind('touchmove', onMove);
+                    }
 
                     function onEnter(evt) {
                         var functionHandler = $parse($attrs.onLongPress);
+                        // For tracking scrolling
+                        if (evt.touches) {
+                            touchStartY = evt.touches[0].screenY;
+                            touchStartX = evt.touches[0].screenX;
+                        }
+                        //Cancel existing timer
                         $timeout.cancel(timer);
                         //To handle click event properly
                         $scope.longPressSent = false;
@@ -30,7 +51,7 @@
                                     $event: evt
                                 });
                             });
-                        }, 600);
+                        }, timerDuration);
 
                     }
 
@@ -55,6 +76,18 @@
                             evt.preventDefault();
                             evt.stopPropagation();
                             evt.stopImmediatePropagation();
+                        }
+
+                    }
+
+                    function onMove(evt) {
+                        var yPosition = evt.touches[0].screenY;
+                        var xPosition = evt.touches[0].screenX;
+
+                        // If we scrolled, prevent long presses
+                        if (touchStartY !== undefined && touchStartX !== undefined &&
+                            (Math.abs(yPosition - touchStartY) > MAX_DELTA) || Math.abs(xPosition - touchStartX) > MAX_DELTA) {
+                            $timeout.cancel(timer);
                         }
 
                     }

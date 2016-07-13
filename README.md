@@ -1,7 +1,9 @@
 # angular-long-press
 Long press support for both desktop and mobile when used in AngularJS framework
 
-Thank you [GitHub Gist](https://gist.github.com/BobNisco/9885852)
+Thank you
+[GitHub Gist](https://gist.github.com/BobNisco/9885852)
+[grrrian](https://github.com/grrrian) for [Prevent long press while scrolling](https://github.com/puneethrai/angular-long-press/issues/3)
 
 [Demo and Project page](http://puneethrai.github.io/angular-long-press/)
 
