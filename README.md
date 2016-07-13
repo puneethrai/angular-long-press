@@ -50,6 +50,8 @@ There are several options that you can set as attributes on the directive elemen
 1.  `on-long-press` : method to be called when long press event is triggered
 2.  `on-touch-end` : method to be called when touch end or mouse up event is triggered
 3.  `prevent-click` : default true, to prevent click event getting triggered after long press is triggered
+4. `long-press-duration` : default 600, Integer value in MS to indicate after how long user touches will trigger long-press event
+5. `prevent-onscrolling` : default true, Boolean value to prevent long press when user is scrolling.
 
 
 # Issues
