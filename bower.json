@@ -1,6 +1,6 @@
 {
     "name": "Angular Long Press",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "homepage": "https://github.com/puneethrai/angular-long-press",
     "authors": [
         "Puneeth Rai <npuneethrai@yahoo.co.in>"
@@ -16,6 +16,6 @@
     "license": "MIT",
     "dependencies": {
         "angular": "~1.5.2",
-        "angular-long-press": "0.2.0"
+        "angular-long-press": "0.3.0"
     }
 }

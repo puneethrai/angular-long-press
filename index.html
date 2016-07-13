@@ -22,6 +22,8 @@
       <div ng-controller="MainController">
         <button class="btn btn-block" ng-click="onClick()" on-long-press="onLongPress()" on-touch-end="onTouchEnd()" prevent-click="true">Long Press with click prevented</button>
         <button class="btn btn-block" ng-click="onClick()" on-long-press="onLongPress()" on-touch-end="onTouchEnd()" prevent-click="false">Long Press with click not prevented</button>
+        <button class="btn btn-block" ng-click="onClick()" on-long-press="onLongPress()" on-touch-end="onTouchEnd()" long-press-duration="1200">Long Press with 1200ms delay</button>
+        <button class="btn btn-block" ng-click="onClick()" on-long-press="onLongPress()" on-touch-end="onTouchEnd()" prevent-onscrolling="false">Long Press triggers while scrolling</button>
         <p class="page-header">{{eventDisplay}}</p>
       </div>
     </section>
@@ -76,6 +78,8 @@ adding the dependencies for Angular first:</p>
 <li> <code>on-long-press</code> : method to be called when long press event is triggered</li>
 <li> <code>on-touch-end</code> : method to be called when touch end or mouse up event is triggered</li>
 <li> <code>prevent-click</code> : default true, to prevent click event getting triggered after long press is triggered</li>
+<li> <code>long-press-duration</code> : default 600, Integer value in MS to indicate after how long user touches will trigger long-press event </li>
+<li> <code>prevent-onscrolling</code> : default true, Boolean value to prevent long press when user is scrolling.</li>
 </ol>
 
 <h1>
@@ -85,7 +89,12 @@ adding the dependencies for Angular first:</p>
 
 <p><strong>Please add a link to a plunker, jsbin, or equivalent.</strong></p>
 
-<p>Thank you <a href="https://gist.github.com/BobNisco/9885852">GitHub Gist</a></p>
+<h1>
+<a id="ThankYou" class="anchor" href="#ThankYou" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Thank You</h1>
+<ul>
+  <li><a href="https://gist.github.com/BobNisco/9885852" target="_blank">GitHub Gist</a></li>
+  <li><a href="https://github.com/grrrian" target="_blank">grrrian</a> for <a href="https://github.com/puneethrai/angular-long-press/issues/3" target="_blank"> Prevent long press while scrolling </a> </li>
+</ul>
 
 <h1>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h1>

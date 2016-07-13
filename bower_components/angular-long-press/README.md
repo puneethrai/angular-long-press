@@ -1,7 +1,9 @@
 # angular-long-press
 Long press support for both desktop and mobile when used in AngularJS framework
 
-Thank you [GitHub Gist](https://gist.github.com/BobNisco/9885852)
+Thank you
+[GitHub Gist](https://gist.github.com/BobNisco/9885852)
+[grrrian](https://github.com/grrrian) for [Prevent long press while scrolling](https://github.com/puneethrai/angular-long-press/issues/3)
 
 [Demo and Project page](http://puneethrai.github.io/angular-long-press/)
 
@@ -48,6 +50,8 @@ There are several options that you can set as attributes on the directive elemen
 1.  `on-long-press` : method to be called when long press event is triggered
 2.  `on-touch-end` : method to be called when touch end or mouse up event is triggered
 3.  `prevent-click` : default true, to prevent click event getting triggered after long press is triggered
+4. `long-press-duration` : default 600, Integer value in MS to indicate after how long user touches will trigger long-press event
+5. `prevent-onscrolling` : default true, Boolean value to prevent long press when user is scrolling.
 
 
 # Issues
@@ -61,3 +65,7 @@ Please check if issue exists and otherwise open issue in [github](https://github
 # License
 
 angular-long-press.js is available under the [MIT license](http://opensource.org/licenses/MIT).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/puneethrai/angular-long-press/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
