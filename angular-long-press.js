@@ -22,6 +22,9 @@
                     $elm.bind('mouseup', onExit);
 
                     $elm.bind('click', onClick);
+                    // For windows mobile browser
+                    $elm.bind('pointerdown', onEnter);
+                    $elm.bind('pointerup', onExit);
                     if (preventLongPressOnScroll) {
                         // Bind touchmove so that we prevent long press when user is scrolling
                         $elm.bind('touchmove', onMove);
@@ -82,7 +85,7 @@
                         var xPosition = evt.touches[0].screenX;
 
                         // If we scrolled, prevent long presses
-                        if (!_.isUndefined(touchStartY) && !_.isUndefined(touchStartX) &&
+                        if (touchStartY !== undefined && touchStartX !== undefined &&
                             (Math.abs(yPosition - touchStartY) > MAX_DELTA) || Math.abs(xPosition - touchStartX) > MAX_DELTA) {
                             $timeout.cancel(timer);
                         }
