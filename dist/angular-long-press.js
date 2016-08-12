@@ -33,9 +33,9 @@
                     function onEnter(evt) {
                         var functionHandler = $parse($attrs.onLongPress);
                         // For tracking scrolling
-                        if (evt.touches) {
-                            touchStartY = evt.touches[0].screenY;
-                            touchStartX = evt.touches[0].screenX;
+                        if ((evt.originalEvent || evt).touches) {
+                            touchStartY = (evt.originalEvent || evt).touches[0].screenY;
+                            touchStartX = (evt.originalEvent || evt).touches[0].screenX;
                         }
                         //Cancel existing timer
                         $timeout.cancel(timer);
@@ -81,8 +81,8 @@
                     }
 
                     function onMove(evt) {
-                        var yPosition = evt.touches[0].screenY;
-                        var xPosition = evt.touches[0].screenX;
+                        var yPosition = (evt.originalEvent || evt).touches[0].screenY;
+                        var xPosition = (evt.originalEvent || evt).touches[0].screenX;
 
                         // If we scrolled, prevent long presses
                         if (touchStartY !== undefined && touchStartX !== undefined &&
